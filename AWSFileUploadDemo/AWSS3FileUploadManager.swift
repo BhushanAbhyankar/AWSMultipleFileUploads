@@ -17,12 +17,13 @@ class AWSS3FileUploadManager {
     static let shared = AWSS3FileUploadManager() // 4
     private init () { }
     
-    let bucketName = "newblogbucket"//"arn:aws:s3:::jd-us01-isg-prod-mobile-upload" //5
-//    let bucketName = "arn:aws:s3:::jd-us01-isg-prod-mobile-upload" //5
+    //  let bucketName = "newblogbucket"
+        let bucketName = "jd-us01-isg-prod-mobile-upload" //5
+    
 
     // Upload files like Text, Zip, etc from local path url
     func uploadOtherFile(fileUrl: URL, conentType: String, progress: progressBlock?, completion: completionBlock?) {
-//        let fileName = self.getUniqueFileName(fileUrl: fileUrl)
+//      let fileName = self.getUniqueFileName(fileUrl: fileUrl)
         let fileName = fileUrl.lastPathComponent
         self.uploadfile(fileUrl: fileUrl, fileName: fileName, contenType: conentType, progress: progress, completion: completion)
     }
@@ -42,8 +43,6 @@ class AWSS3FileUploadManager {
     private func uploadfile(fileUrl: URL, fileName: String, contenType: String, progress: progressBlock?, completion: completionBlock?) {
         // Upload progress block
         let expression = AWSS3TransferUtilityUploadExpression()
-        expression.setValue("public-read-write", forRequestHeader: "x-amz-acl")
-        expression.setValue("public-read-write", forRequestParameter: "x-amz-acl")
 
         expression.progressBlock = {(task, awsProgress) in
             guard let uploadProgress = progress else { return }
@@ -74,7 +73,7 @@ class AWSS3FileUploadManager {
         let awsTransferUtility = AWSS3TransferUtility.default()
         awsTransferUtility.uploadFile(fileUrl, bucket: bucketName, key: fileName, contentType: contenType, expression: expression, completionHandler: completionHandler).continueWith { (task) -> Any? in
             if let error = task.error {
-                print("error is: \(error.localizedDescription)")
+                print("error is: \(error)")
             }
             if let _ = task.result {
                 // your uploadTask
