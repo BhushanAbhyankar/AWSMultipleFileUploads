@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C22ABC2254955E800BAC0DB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C22ABC1254955E800BAC0DB /* logo.png */; };
+		0C22ABCD25496E1100BAC0DB /* UploadCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22ABCC25496E1100BAC0DB /* UploadCheckViewController.swift */; };
 		0CC3B3EC25484E3F00238832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3EB25484E3F00238832 /* AppDelegate.swift */; };
 		0CC3B3EE25484E3F00238832 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3ED25484E3F00238832 /* SceneDelegate.swift */; };
 		0CC3B3F025484E3F00238832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3EF25484E3F00238832 /* ViewController.swift */; };
@@ -15,6 +17,16 @@
 		0CC3B3F825484E4100238832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B3F625484E4100238832 /* LaunchScreen.storyboard */; };
 		0CC3B40325484E4100238832 /* AWSFileUploadDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B40225484E4100238832 /* AWSFileUploadDemoTests.swift */; };
 		0CC3B40E25484E4100238832 /* AWSFileUploadDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B40D25484E4100238832 /* AWSFileUploadDemoUITests.swift */; };
+		0CC3B42B254851D700238832 /* AWSS3FileUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B42A254851D700238832 /* AWSS3FileUploadManager.swift */; };
+		0CC3B4302548AC0000238832 /* person.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B42F2548ABFF00238832 /* person.jpg */; };
+		0CC3B4352548AD1200238832 /* p2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B4342548AD1200238832 /* p2.webp */; };
+		0CC3B43A2548AFAF00238832 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B4392548AFAF00238832 /* user.png */; };
+		0CC3B4462548B12300238832 /* pexels.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B4442548B12300238832 /* pexels.jpeg */; };
+		0CC3B4472548B12300238832 /* photo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B4452548B12300238832 /* photo.jpeg */; };
+		0CC3B44C2548B1A200238832 /* logs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3B44B2548B1A200238832 /* logs.rtf */; };
+		11C695CC57663C8C8E0DC4EB /* Pods_AWSFileUploadDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A532D8034886F8DE4AD8C633 /* Pods_AWSFileUploadDemoTests.framework */; };
+		5572FBD58DE30BD96948E2BE /* Pods_AWSFileUploadDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C508560C31040E52E7FE1C /* Pods_AWSFileUploadDemo.framework */; };
+		5C180EB1E481362027BD3132 /* Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7F5A2EC97C976AF9021747 /* Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BEF858081C0709469603A2F /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C22ABC1254955E800BAC0DB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0C22ABCC25496E1100BAC0DB /* UploadCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCheckViewController.swift; sourceTree = "<group>"; };
+		0C44A8078BCD21357076AA4E /* Pods-AWSFileUploadDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemoTests.release.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemoTests/Pods-AWSFileUploadDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		0CC3B3E825484E3F00238832 /* AWSFileUploadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSFileUploadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC3B3EB25484E3F00238832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC3B3ED25484E3F00238832 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,20 @@
 		0CC3B40925484E4100238832 /* AWSFileUploadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSFileUploadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC3B40D25484E4100238832 /* AWSFileUploadDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSFileUploadDemoUITests.swift; sourceTree = "<group>"; };
 		0CC3B40F25484E4100238832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC3B42A254851D700238832 /* AWSS3FileUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSS3FileUploadManager.swift; sourceTree = "<group>"; };
+		0CC3B42F2548ABFF00238832 /* person.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = person.jpg; sourceTree = "<group>"; };
+		0CC3B4342548AD1200238832 /* p2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = p2.webp; sourceTree = "<group>"; };
+		0CC3B4392548AFAF00238832 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		0CC3B4442548B12300238832 /* pexels.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pexels.jpeg; sourceTree = "<group>"; };
+		0CC3B4452548B12300238832 /* photo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpeg; sourceTree = "<group>"; };
+		0CC3B44B2548B1A200238832 /* logs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = logs.rtf; sourceTree = "<group>"; };
+		11D3597B3F3A2FB5FCB9CC7E /* Pods-AWSFileUploadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemo.release.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemo/Pods-AWSFileUploadDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4AED8A968382286C684770D2 /* Pods-AWSFileUploadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemo.debug.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemo/Pods-AWSFileUploadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		75C508560C31040E52E7FE1C /* Pods_AWSFileUploadDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSFileUploadDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7F5A2EC97C976AF9021747 /* Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A532D8034886F8DE4AD8C633 /* Pods_AWSFileUploadDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSFileUploadDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AB5AF13BA226F692F78E73 /* Pods-AWSFileUploadDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemoTests/Pods-AWSFileUploadDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E41C454395631531100E882A /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5572FBD58DE30BD96948E2BE /* Pods_AWSFileUploadDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C695CC57663C8C8E0DC4EB /* Pods_AWSFileUploadDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C180EB1E481362027BD3132 /* Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +116,8 @@
 				0CC3B40125484E4100238832 /* AWSFileUploadDemoTests */,
 				0CC3B40C25484E4100238832 /* AWSFileUploadDemoUITests */,
 				0CC3B3E925484E3F00238832 /* Products */,
+				E27F0296FD23562374BDCF88 /* Pods */,
+				E9493E0C5D89C5C117A8F6EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +134,13 @@
 		0CC3B3EA25484E3F00238832 /* AWSFileUploadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0CC3B44B2548B1A200238832 /* logs.rtf */,
+				0C22ABC1254955E800BAC0DB /* logo.png */,
+				0CC3B4442548B12300238832 /* pexels.jpeg */,
+				0CC3B4452548B12300238832 /* photo.jpeg */,
+				0CC3B4392548AFAF00238832 /* user.png */,
+				0CC3B4342548AD1200238832 /* p2.webp */,
+				0CC3B42F2548ABFF00238832 /* person.jpg */,
 				0CC3B3EB25484E3F00238832 /* AppDelegate.swift */,
 				0CC3B3ED25484E3F00238832 /* SceneDelegate.swift */,
 				0CC3B3EF25484E3F00238832 /* ViewController.swift */,
@@ -106,6 +148,8 @@
 				0CC3B3F425484E4100238832 /* Assets.xcassets */,
 				0CC3B3F625484E4100238832 /* LaunchScreen.storyboard */,
 				0CC3B3F925484E4100238832 /* Info.plist */,
+				0CC3B42A254851D700238832 /* AWSS3FileUploadManager.swift */,
+				0C22ABCC25496E1100BAC0DB /* UploadCheckViewController.swift */,
 			);
 			path = AWSFileUploadDemo;
 			sourceTree = "<group>";
@@ -128,6 +172,29 @@
 			path = AWSFileUploadDemoUITests;
 			sourceTree = "<group>";
 		};
+		E27F0296FD23562374BDCF88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AED8A968382286C684770D2 /* Pods-AWSFileUploadDemo.debug.xcconfig */,
+				11D3597B3F3A2FB5FCB9CC7E /* Pods-AWSFileUploadDemo.release.xcconfig */,
+				0BEF858081C0709469603A2F /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.debug.xcconfig */,
+				E41C454395631531100E882A /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.release.xcconfig */,
+				D5AB5AF13BA226F692F78E73 /* Pods-AWSFileUploadDemoTests.debug.xcconfig */,
+				0C44A8078BCD21357076AA4E /* Pods-AWSFileUploadDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9493E0C5D89C5C117A8F6EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75C508560C31040E52E7FE1C /* Pods_AWSFileUploadDemo.framework */,
+				8F7F5A2EC97C976AF9021747 /* Pods_AWSFileUploadDemo_AWSFileUploadDemoUITests.framework */,
+				A532D8034886F8DE4AD8C633 /* Pods_AWSFileUploadDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CC3B41225484E4100238832 /* Build configuration list for PBXNativeTarget "AWSFileUploadDemo" */;
 			buildPhases = (
+				ECDDC4E28BEF7435C357E477 /* [CP] Check Pods Manifest.lock */,
 				0CC3B3E425484E3F00238832 /* Sources */,
 				0CC3B3E525484E3F00238832 /* Frameworks */,
 				0CC3B3E625484E3F00238832 /* Resources */,
+				61082DF908555571D3A9D30C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CC3B41525484E4100238832 /* Build configuration list for PBXNativeTarget "AWSFileUploadDemoTests" */;
 			buildPhases = (
+				63681A41963C012B333EB465 /* [CP] Check Pods Manifest.lock */,
 				0CC3B3FA25484E4100238832 /* Sources */,
 				0CC3B3FB25484E4100238832 /* Frameworks */,
 				0CC3B3FC25484E4100238832 /* Resources */,
@@ -170,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CC3B41825484E4100238832 /* Build configuration list for PBXNativeTarget "AWSFileUploadDemoUITests" */;
 			buildPhases = (
+				C81B1B9B00A686FBE3A70182 /* [CP] Check Pods Manifest.lock */,
 				0CC3B40525484E4100238832 /* Sources */,
 				0CC3B40625484E4100238832 /* Frameworks */,
 				0CC3B40725484E4100238832 /* Resources */,
+				47FF35760A4FC820B7414AA8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,8 +303,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3B4472548B12300238832 /* photo.jpeg in Resources */,
+				0CC3B44C2548B1A200238832 /* logs.rtf in Resources */,
+				0CC3B4302548AC0000238832 /* person.jpg in Resources */,
 				0CC3B3F825484E4100238832 /* LaunchScreen.storyboard in Resources */,
+				0CC3B43A2548AFAF00238832 /* user.png in Resources */,
+				0CC3B4352548AD1200238832 /* p2.webp in Resources */,
+				0C22ABC2254955E800BAC0DB /* logo.png in Resources */,
 				0CC3B3F525484E4100238832 /* Assets.xcassets in Resources */,
+				0CC3B4462548B12300238832 /* pexels.jpeg in Resources */,
 				0CC3B3F325484E3F00238832 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,11 +332,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47FF35760A4FC820B7414AA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61082DF908555571D3A9D30C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo/Pods-AWSFileUploadDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo/Pods-AWSFileUploadDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSFileUploadDemo/Pods-AWSFileUploadDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63681A41963C012B333EB465 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSFileUploadDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C81B1B9B00A686FBE3A70182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDDC4E28BEF7435C357E477 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSFileUploadDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CC3B3E425484E3F00238832 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3B42B254851D700238832 /* AWSS3FileUploadManager.swift in Sources */,
+				0C22ABCD25496E1100BAC0DB /* UploadCheckViewController.swift in Sources */,
 				0CC3B3F025484E3F00238832 /* ViewController.swift in Sources */,
 				0CC3B3EC25484E3F00238832 /* AppDelegate.swift in Sources */,
 				0CC3B3EE25484E3F00238832 /* SceneDelegate.swift in Sources */,
@@ -433,11 +617,14 @@
 		};
 		0CC3B41325484E4100238832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AED8A968382286C684770D2 /* Pods-AWSFileUploadDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BNG8B42ZFB;
 				INFOPLIST_FILE = AWSFileUploadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,11 +638,14 @@
 		};
 		0CC3B41425484E4100238832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D3597B3F3A2FB5FCB9CC7E /* Pods-AWSFileUploadDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BNG8B42ZFB;
 				INFOPLIST_FILE = AWSFileUploadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +659,7 @@
 		};
 		0CC3B41625484E4100238832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5AB5AF13BA226F692F78E73 /* Pods-AWSFileUploadDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +681,7 @@
 		};
 		0CC3B41725484E4100238832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C44A8078BCD21357076AA4E /* Pods-AWSFileUploadDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +703,7 @@
 		};
 		0CC3B41925484E4100238832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BEF858081C0709469603A2F /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +723,7 @@
 		};
 		0CC3B41A25484E4100238832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E41C454395631531100E882A /* Pods-AWSFileUploadDemo-AWSFileUploadDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
