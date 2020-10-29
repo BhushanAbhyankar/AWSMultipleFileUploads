@@ -59,6 +59,15 @@
                                     <action selector="buttonCheckUploadedFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqn-Ck-83y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5Y-nf-ZbB">
+                                <rect key="frame" x="20" y="249" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="roq-Kk-Cev"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,16 +78,20 @@
                             <constraint firstItem="MG4-nQ-VEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bgy-G6-0gn"/>
                             <constraint firstItem="Y2F-ef-aSC" firstAttribute="top" secondItem="MG4-nQ-VEq" secondAttribute="bottom" constant="25" id="FMH-WV-l6p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MG4-nQ-VEq" secondAttribute="trailing" constant="20" id="MaR-21-kdw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5Y-nf-ZbB" secondAttribute="trailing" constant="20" id="ZlS-O8-Rjj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pEt-2N-N7F" secondAttribute="trailing" constant="20" id="bAc-El-ogl"/>
+                            <constraint firstItem="F5Y-nf-ZbB" firstAttribute="top" secondItem="pEt-2N-N7F" secondAttribute="bottom" constant="8" id="ejr-u1-w97"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hj-ei-rAC" secondAttribute="trailing" constant="20" id="faU-B2-1ls"/>
                             <constraint firstItem="pEt-2N-N7F" firstAttribute="top" secondItem="7hj-ei-rAC" secondAttribute="bottom" constant="50" id="hRk-rf-Fpi"/>
                             <constraint firstItem="pEt-2N-N7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kMn-J2-Nui"/>
+                            <constraint firstItem="F5Y-nf-ZbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sLe-Rq-Img"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2F-ef-aSC" secondAttribute="trailing" constant="20" id="uTy-aq-NUV"/>
                             <constraint firstItem="MG4-nQ-VEq" firstAttribute="top" secondItem="pEt-2N-N7F" secondAttribute="bottom" constant="59" id="weu-Ch-6wW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cv0-YR-uIs"/>
                     <connections>
+                        <outlet property="labelProgressPercentage" destination="F5Y-nf-ZbB" id="SF8-rj-ATr"/>
                         <outlet property="labelUploadUrl" destination="7hj-ei-rAC" id="l87-6k-gDA"/>
                         <outlet property="progressView" destination="pEt-2N-N7F" id="Ees-UP-XA1"/>
                     </connections>

@@ -29,8 +29,6 @@ class UploadCheckViewController: UIViewController,WKUIDelegate {
                 let request = URLRequest(url: url ?? URL(string:"")!)
                 self.wkWebView.load(request)
                 // add activity
-//                self.wkWebView.navigationDelegate = self
-//                self.wkWebView.scrollView.delegate=self
             }
     }
 

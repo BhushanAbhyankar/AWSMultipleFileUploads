@@ -11,7 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var labelUploadUrl: UILabel!
+    @IBOutlet weak var labelProgressPercentage: UILabel!
+    
     var uploadedPath = ""
+    let kFractionCompletedKeyPath = "fractionCompleted"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,7 +44,8 @@ class ViewController: UIViewController {
 
             // Print the urls of the files contained in the documents directory
             print(directoryContents)
-            uploadFileToS3FromArrayPaths(pathArray: directoryContents)
+//            uploadFileToS3FromArrayPaths(pathArray: directoryContents)
+            uploadFileToS3FromArrayPathsViaOperations(pathArray: directoryContents)
         } catch {
             print("Could not search for urls of files in documents directory: \(error)")
         }
@@ -56,10 +61,37 @@ class ViewController: UIViewController {
             }
         }
     }
+    func uploadFileToS3FromArrayPathsViaOperations(pathArray:Array<URL>)  {
+        let fileUploadOperationManager = FileUploadOperationManager.sharedInstance
+        let totalNOOfOperations:Int = pathArray.count
+        let multiPartTotalProgress:Progress = Progress(totalUnitCount: Int64(totalNOOfOperations))
+
+        for path in pathArray {
+
+            let manager = FileManager.default
+            if (manager.fileExists(atPath: path.relativePath)) {
+                // it's here!!
+                var uploadOperations: UploadNetworkOperation!
+
+                uploadOperations = UploadNetworkOperation.init(uploadPath: path, completion: { (uploadedURL, error) in
+                    DispatchQueue.main.async(execute: {
+                        multiPartTotalProgress.completedUnitCount = multiPartTotalProgress.completedUnitCount + 1
+
+                       let  percentage = Float(multiPartTotalProgress.completedUnitCount) / Float(multiPartTotalProgress.totalUnitCount) * 100
+                        let per = percentage/100.0
+                        self.progressView.progress = Float(per)
+                        
+                        let aStr = String(format: "Completed %d Of %d", multiPartTotalProgress.completedUnitCount,multiPartTotalProgress.totalUnitCount)
+                        self.labelProgressPercentage.text = aStr
+                    })
+                })
+                multiPartTotalProgress.addChild(uploadOperations.progress, withPendingUnitCount:1)
+                fileUploadOperationManager.addOperation(operation: uploadOperations)
+            }
+        }
+    }
     
     func uploadFileToS3(uploadPath:URL)  {
-//        let  resource: String = "pexels"
-//        let type: String = "jpeg"
         let type: String = uploadPath.lastPathComponent.components(separatedBy: ".").last ?? "" //""jpeg"
 
         let fileUrlMain = URL.init(fileURLWithPath: uploadPath.relativePath)
@@ -67,6 +99,8 @@ class ViewController: UIViewController {
 
             guard let strongSelf = self else { return }
             strongSelf.progressView.progress = Float(progress)
+            let aStr = String(format: "Completed : %.0f %", strongSelf.progressView.progress*100)
+            strongSelf.labelProgressPercentage.text = aStr
 
         }, completion: { [weak self] (uploadedFileUrl, error) in
 

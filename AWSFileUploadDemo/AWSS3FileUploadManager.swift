@@ -63,9 +63,9 @@ class AWSS3FileUploadManager {
                         completionBlock(publicURL?.absoluteString, nil)
                     }
                 } else {
-                    if let completionBlock = completion {
-                        completionBlock(nil, error)
-                    }
+                }
+                if let completionBlock = completion {
+                    completionBlock(nil, error)
                 }
             })
         }
