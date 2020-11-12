@@ -11,8 +11,7 @@ import AWSS3
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    //let cognitoPoolID = "ap-south-1:5d993a50-f970-42f4-930e-4ef306c729f0"
-    let cognitoPoolID = "us-east-1:8fe74d1f-0f60-4444-9ce0-382e8c2aa577"
+    let cognitoPoolID = "ap-south-1:5d993a50-f970-42f4-930e-4ef306c729f0"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -39,22 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initializeS3() {
             let poolId = cognitoPoolID
             let credentialsProvider = AWSCognitoCredentialsProvider(
-                regionType: .USEast1, //other regionType according to your location.
+                regionType: .APSouth1, //other regionType according to your location.
                 identityPoolId: poolId
             )
-            let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+            let configuration = AWSServiceConfiguration(region: .APSouth1, credentialsProvider: credentialsProvider)
             AWSServiceManager.default().defaultServiceConfiguration = configuration
         }
-    
-    
-//    func initializeS3() {
-//            let poolId = cognitoPoolID
-//            let credentialsProvider = AWSCognitoCredentialsProvider(
-//                regionType: .APSouth1, //other regionType according to your location.
-//                identityPoolId: poolId
-//            )
-//            let configuration = AWSServiceConfiguration(region: .APSouth1, credentialsProvider: credentialsProvider)
-//            AWSServiceManager.default().defaultServiceConfiguration = configuration
-//        }
 }
 

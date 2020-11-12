@@ -12,7 +12,6 @@
 		0C22AC23254AC1D300BAC0DB /* FileUploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22AC22254AC1D300BAC0DB /* FileUploadOperation.swift */; };
 		0C22AC2B254AC1ED00BAC0DB /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22AC2A254AC1ED00BAC0DB /* BaseOperation.swift */; };
 		0C43E32F254AC704006C5B49 /* FileUploadOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43E32E254AC704006C5B49 /* FileUploadOperationManager.swift */; };
-		0C43E33A254B00B5006C5B49 /* JD-Data-Upload123.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0C43E339254B00B5006C5B49 /* JD-Data-Upload123.zip */; };
 		0CC3B3EC25484E3F00238832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3EB25484E3F00238832 /* AppDelegate.swift */; };
 		0CC3B3EE25484E3F00238832 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3ED25484E3F00238832 /* SceneDelegate.swift */; };
 		0CC3B3F025484E3F00238832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3B3EF25484E3F00238832 /* ViewController.swift */; };
@@ -57,7 +56,6 @@
 		0C22AC22254AC1D300BAC0DB /* FileUploadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadOperation.swift; sourceTree = "<group>"; };
 		0C22AC2A254AC1ED00BAC0DB /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		0C43E32E254AC704006C5B49 /* FileUploadOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadOperationManager.swift; sourceTree = "<group>"; };
-		0C43E339254B00B5006C5B49 /* JD-Data-Upload123.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "JD-Data-Upload123.zip"; sourceTree = "<group>"; };
 		0C44A8078BCD21357076AA4E /* Pods-AWSFileUploadDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSFileUploadDemoTests.release.xcconfig"; path = "Target Support Files/Pods-AWSFileUploadDemoTests/Pods-AWSFileUploadDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		0CC3B3E825484E3F00238832 /* AWSFileUploadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSFileUploadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC3B3EB25484E3F00238832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		0CC3B3EA25484E3F00238832 /* AWSFileUploadDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0C43E339254B00B5006C5B49 /* JD-Data-Upload123.zip */,
 				0C22AC20254AC16600BAC0DB /* FileUploadOperation */,
 				0CC3B44B2548B1A200238832 /* logs.rtf */,
 				0C22ABC1254955E800BAC0DB /* logo.png */,
@@ -325,7 +322,6 @@
 			files = (
 				0CC3B4472548B12300238832 /* photo.jpeg in Resources */,
 				0CC3B44C2548B1A200238832 /* logs.rtf in Resources */,
-				0C43E33A254B00B5006C5B49 /* JD-Data-Upload123.zip in Resources */,
 				0CC3B4302548AC0000238832 /* person.jpg in Resources */,
 				0CC3B3F825484E4100238832 /* LaunchScreen.storyboard in Resources */,
 				0CC3B43A2548AFAF00238832 /* user.png in Resources */,

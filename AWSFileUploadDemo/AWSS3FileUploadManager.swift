@@ -17,8 +17,7 @@ class AWSS3FileUploadManager {
     static let shared = AWSS3FileUploadManager() // 4
     private init () { }
     
-    //  let bucketName = "newblogbucket"
-        let bucketName = "jd-us01-isg-prod-mobile-upload" //5
+      let bucketName = "newblogbucket"
     
 
     // Upload files like Text, Zip, etc from local path url

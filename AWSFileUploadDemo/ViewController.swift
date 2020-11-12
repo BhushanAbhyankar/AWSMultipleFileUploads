@@ -21,11 +21,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.progressView.progress = Float(0.0)
         copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".png")
-        //        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".rtf")
-        //        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".png")
-        //        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpg")
-        //        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".webp")
-        //        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpeg")
+                copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".rtf")
+                copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".png")
+                copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpg")
+                copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".webp")
+                copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpeg")
     }
 
     @IBAction func buttonCheckUploadedFile(_ sender: Any) {

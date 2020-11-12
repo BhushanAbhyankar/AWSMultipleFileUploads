@@ -97,9 +97,9 @@
 				<key>Default</key>
 				<dict>
 					<key>PoolId</key>
-					<string>us-east-1:8fe74d1f-0f60-4444-9ce0-382e8c2aa577</string>
+					<string>ap-south-1:5d993a50-f970-42f4-930e-4ef306c729f0</string>
 					<key>Region</key>
-					<string>us-east-1</string>
+					<string>ap-south-1</string>
 				</dict>
 			</dict>
 		</dict>
@@ -108,7 +108,7 @@
 			<key>Default</key>
 			<dict/>
 			<key>Region</key>
-			<string>us-east-1</string>
+			<string>ap-south-1</string>
 		</dict>
 	</dict>
 </dict>
