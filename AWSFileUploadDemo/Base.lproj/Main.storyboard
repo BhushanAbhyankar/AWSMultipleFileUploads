@@ -23,17 +23,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploaded Url" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hj-ei-rAC">
-                                <rect key="frame" x="20" y="168" width="374" height="19"/>
+                                <rect key="frame" x="20" y="131" width="374" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pEt-2N-N7F">
-                                <rect key="frame" x="20" y="237" width="374" height="4"/>
+                                <rect key="frame" x="20" y="193" width="374" height="4"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG4-nQ-VEq">
-                                <rect key="frame" x="20" y="300" width="374" height="40"/>
-                                <color key="backgroundColor" red="0.21176470589999999" green="0.48627450979999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="281" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.70196078429999997" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VbK-hX-l37"/>
                                 </constraints>
@@ -46,8 +46,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2F-ef-aSC">
-                                <rect key="frame" x="20" y="365" width="374" height="40"/>
-                                <color key="backgroundColor" red="0.21176470589999999" green="0.48627450979999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="346" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8Gb-Ax-vw0"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5Y-nf-ZbB">
-                                <rect key="frame" x="20" y="249" width="374" height="21"/>
+                                <rect key="frame" x="20" y="205" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="roq-Kk-Cev"/>
                                 </constraints>
@@ -72,25 +72,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7hj-ei-rAC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="2Uq-J3-I3o"/>
+                            <constraint firstItem="7hj-ei-rAC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="2Uq-J3-I3o"/>
                             <constraint firstItem="7hj-ei-rAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2VR-yH-nki"/>
                             <constraint firstItem="Y2F-ef-aSC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5b4-uq-TRd"/>
                             <constraint firstItem="MG4-nQ-VEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bgy-G6-0gn"/>
                             <constraint firstItem="Y2F-ef-aSC" firstAttribute="top" secondItem="MG4-nQ-VEq" secondAttribute="bottom" constant="25" id="FMH-WV-l6p"/>
+                            <constraint firstItem="MG4-nQ-VEq" firstAttribute="top" secondItem="F5Y-nf-ZbB" secondAttribute="bottom" constant="55" id="Fl0-uz-Icw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MG4-nQ-VEq" secondAttribute="trailing" constant="20" id="MaR-21-kdw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5Y-nf-ZbB" secondAttribute="trailing" constant="20" id="ZlS-O8-Rjj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pEt-2N-N7F" secondAttribute="trailing" constant="20" id="bAc-El-ogl"/>
                             <constraint firstItem="F5Y-nf-ZbB" firstAttribute="top" secondItem="pEt-2N-N7F" secondAttribute="bottom" constant="8" id="ejr-u1-w97"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hj-ei-rAC" secondAttribute="trailing" constant="20" id="faU-B2-1ls"/>
-                            <constraint firstItem="pEt-2N-N7F" firstAttribute="top" secondItem="7hj-ei-rAC" secondAttribute="bottom" constant="50" id="hRk-rf-Fpi"/>
+                            <constraint firstItem="pEt-2N-N7F" firstAttribute="top" secondItem="7hj-ei-rAC" secondAttribute="bottom" constant="43" id="hRk-rf-Fpi"/>
                             <constraint firstItem="pEt-2N-N7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kMn-J2-Nui"/>
                             <constraint firstItem="F5Y-nf-ZbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sLe-Rq-Img"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2F-ef-aSC" secondAttribute="trailing" constant="20" id="uTy-aq-NUV"/>
-                            <constraint firstItem="MG4-nQ-VEq" firstAttribute="top" secondItem="pEt-2N-N7F" secondAttribute="bottom" constant="59" id="weu-Ch-6wW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cv0-YR-uIs"/>
                     <connections>
+                        <outlet property="buttonCheckUploadedFiles" destination="Y2F-ef-aSC" id="RsD-fo-OTc"/>
+                        <outlet property="buttonUploadFiles" destination="MG4-nQ-VEq" id="Uhw-7v-kub"/>
                         <outlet property="labelProgressPercentage" destination="F5Y-nf-ZbB" id="SF8-rj-ATr"/>
                         <outlet property="labelUploadUrl" destination="7hj-ei-rAC" id="l87-6k-gDA"/>
                         <outlet property="progressView" destination="pEt-2N-N7F" id="Ees-UP-XA1"/>
@@ -148,6 +150,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

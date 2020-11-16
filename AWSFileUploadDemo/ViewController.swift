@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelUploadUrl: UILabel!
     @IBOutlet weak var labelProgressPercentage: UILabel!
     
+    @IBOutlet weak var buttonUploadFiles: UIButton!
+    @IBOutlet weak var buttonCheckUploadedFiles: UIButton!
     var uploadedPath = ""
     let kFractionCompletedKeyPath = "fractionCompleted"
     
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
                 copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpg")
                 copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".webp")
                 copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".jpeg")
+        buttonUploadFiles.layer.cornerRadius = 5
+        buttonCheckUploadedFiles.layer.cornerRadius = 5
     }
 
     @IBAction func buttonCheckUploadedFile(_ sender: Any) {
@@ -44,23 +48,13 @@ class ViewController: UIViewController {
 
             // Print the urls of the files contained in the documents directory
             print(directoryContents)
-//            uploadFileToS3FromArrayPaths(pathArray: directoryContents)
             uploadFileToS3FromArrayPathsViaOperations(pathArray: directoryContents)
         } catch {
             print("Could not search for urls of files in documents directory: \(error)")
         }
 
     }
-   
-    func uploadFileToS3FromArrayPaths(pathArray:Array<URL>)  {
-        for path in pathArray {
-            let manager = FileManager.default
-            if (manager.fileExists(atPath: path.relativePath)) {
-                // it's here!!
-                uploadFileToS3(uploadPath: path)
-            }
-        }
-    }
+
     func uploadFileToS3FromArrayPathsViaOperations(pathArray:Array<URL>)  {
         let fileUploadOperationManager = FileUploadOperationManager.sharedInstance
         let totalNOOfOperations:Int = pathArray.count
@@ -83,6 +77,9 @@ class ViewController: UIViewController {
                         
                         let aStr = String(format: "Completed %d Of %d", multiPartTotalProgress.completedUnitCount,multiPartTotalProgress.totalUnitCount)
                         self.labelProgressPercentage.text = aStr
+                        self.uploadedPath  = uploadedURL as! String
+                        self.labelUploadUrl.text = "Uploaded file url: " + self.uploadedPath
+
                     })
                 })
                 multiPartTotalProgress.addChild(uploadOperations.progress, withPendingUnitCount:1)
@@ -91,6 +88,42 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    func checkUploadedFile()  {
+        if (self.uploadedPath.count > 0) {
+            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UploadCheckViewControllerID") as? UploadCheckViewController {
+                viewController.originalSiteUrl =  self.uploadedPath
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+    }
+   
+    func getDirectoryPath() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0];
+        return documentsDirectory
+    }
+    
+    func copyFilesFromBundleToDocumentsFolderWith(fileExtension: String) {
+        if let resPath = Bundle.main.resourcePath {
+            do {
+                let dirContents = try FileManager.default.contentsOfDirectory(atPath: resPath)
+                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+                let filteredFiles = dirContents.filter{ $0.contains(fileExtension)}
+                for fileName in filteredFiles {
+                    if let documentsURL = documentsURL {
+                        let path = String(format: "FilesToUpload/ %1$@", fileName)
+                        let sourceURL = Bundle.main.bundleURL.appendingPathComponent(path)
+                        let destURL = documentsURL.appendingPathComponent(fileName)
+                        do { try FileManager.default.copyItem(at: sourceURL, to: destURL) } catch { }
+                    }
+                }
+            } catch { }
+        }
+    }
+    
+    //call this function if you don't want to use operation queue
     func uploadFileToS3(uploadPath:URL)  {
         let type: String = uploadPath.lastPathComponent.components(separatedBy: ".").last ?? "" //""jpeg"
 
@@ -112,36 +145,6 @@ class ViewController: UIViewController {
                 print("\(String(describing: error?.localizedDescription))")
             }
         })
-    }
-    
-    func checkUploadedFile()  {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UploadCheckViewControllerID") as? UploadCheckViewController {
-            viewController.originalSiteUrl =  self.uploadedPath
-            self.navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-   
-    func getDirectoryPath() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0];
-        return documentsDirectory
-    }
-    
-    func copyFilesFromBundleToDocumentsFolderWith(fileExtension: String) {
-        if let resPath = Bundle.main.resourcePath {
-            do {
-                let dirContents = try FileManager.default.contentsOfDirectory(atPath: resPath)
-                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-                let filteredFiles = dirContents.filter{ $0.contains(fileExtension)}
-                for fileName in filteredFiles {
-                    if let documentsURL = documentsURL {
-                        let sourceURL = Bundle.main.bundleURL.appendingPathComponent(fileName)
-                        let destURL = documentsURL.appendingPathComponent(fileName)
-                        do { try FileManager.default.copyItem(at: sourceURL, to: destURL) } catch { }
-                    }
-                }
-            } catch { }
-        }
     }
 }
 

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-let NSOPERAITON_COUNT_KEY = "operationCount"
 
 class FileUploadOperationManager: NSObject {
     private var syncQueue: OperationQueue = OperationQueue()
@@ -15,12 +14,10 @@ class FileUploadOperationManager: NSObject {
     override init() {
         super.init()
         syncQueue.maxConcurrentOperationCount = 1 // Configured as per server requirements
-      //  syncQueue.addObserver(self, forKeyPath: NSOPERAITON_COUNT_KEY, options: NSKeyValueObservingOptions.new, context: nil)
         
     }
     
     deinit {
-       // syncQueue.removeObserver(self, forKeyPath: NSOPERAITON_COUNT_KEY)
         syncQueue.cancelAllOperations()
     }
     

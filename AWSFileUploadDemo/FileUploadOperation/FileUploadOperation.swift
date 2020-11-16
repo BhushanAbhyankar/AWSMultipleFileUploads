@@ -43,7 +43,6 @@ private extension UploadNetworkOperation {
 
         let fileUrlMain = URL.init(fileURLWithPath: uploadPath.relativePath)
         AWSS3FileUploadManager.shared.uploadOtherFile(fileUrl: fileUrlMain, conentType: type, progress: { [weak self] (progress) in
-//            guard let strongSelf = self else { return }
             let aStr = String(format: "Completed : %.0f %", Float(progress)*100)
             print(aStr)
 
