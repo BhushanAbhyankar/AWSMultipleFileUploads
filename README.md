@@ -1,5 +1,5 @@
 # AWSMultipleFileUploads
-This demo project s3explains functionality of uploading files to AWS S3
+This demo project explains functionality of uploading files to AWS S3 using Swift
 
 Upload Images, video, audio, or any type of files to AWS S3 Bucket using Swift.
 
