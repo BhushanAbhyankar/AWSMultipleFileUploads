@@ -44,58 +44,8 @@ pod 'AWSCore'
 5.Setting up permissions for Internet access to upload files to AWS S3.
   It is important to give the application Internet access permission or even after building it will give errors and won’t be upload files.
   So in your projects info.plist Add the following code in the file to give it permission, make sure to change the poolID and region according to the bucket set up in previous steps.
-    
-    
-  <key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>amazonaws.com</key>
-			<dict>
-				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
-				<string>TLSv1.0</string>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-			<key>amazonaws.com.cn</key>
-			<dict>
-				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
-				<string>TLSv1.0</string>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-		</dict>
-	</dict>
-	<key>AWS</key>
-	<dict>
-		<key>CredentialsProvider</key>
-		<dict>
-			<key>CognitoIdentity</key>
-			<dict>
-				<key>Default</key>
-				<dict>
-					<key>PoolId</key>
-					<string>*****your poolID here*****</string>
-					<key>Region</key>
-					<string>ap-south-1</string> //your region here
-				</dict>
-			</dict>
-		</dict>
-		<key>S3TransferManager</key>
-		<dict>
-			<key>Default</key>
-			<dict>
-				<key>Region</key>
-				<string>ap-south-1</string>
-			</dict>
-		</dict>
-	</dict>
+   * Add key values to info.plist under NSAppTransportSecurity. AWS section in plist. For refrence check this projects info.plist
+   
     
   And that’s It you can now launch your app and start uploading all types of content you want, just make sure to keep the “type” as the extension of the file type you are uploading.
   Call uploadOtherFile from AWSS3FileUploadManager class from your viewcontroller to upload files.
